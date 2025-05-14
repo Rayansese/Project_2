@@ -52,6 +52,6 @@ left: 15px;
 width: calc(100% - 30px);
 }
 .logo img {
-    
+    width: 80%;
 }
 /* end header */
