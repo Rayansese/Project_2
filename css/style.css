@@ -1,7 +1,15 @@
+:root {
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
+}
+  html {
+    scroll-behavior: smooth;
+  }
 body {
     margin: 0;
     padding: 0;
-    
+    font-family: "Open Sans" , sans-serif;
 }
 ul {
     list-style: none;
@@ -34,7 +42,7 @@ ul {
 
 /* start header */
 header {
-
+  z-index: 2;
 }
 header .container {
     display: flex;
@@ -60,4 +68,48 @@ header nav {
   align-items: center;
   justify-content: flex-end;
 }
+header ul {
+    display: flex;
+    margin: 0;
+  }
+ header li {
+  /* padding: 15px !important; */
+}
+header .form {
+  padding-left: 40px;
+  position: relative;
+}
+header .form::before  {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #777;
+  left: 50%;
+  top: 0;
+}
+
+  /* header li a {
+    width: inherit;
+    height: inherit;
+  } */
+header li a.active,
+header li a:hover {
+  color: var(--main-color);
+  border-bottom: solid 1px var(--main-color); 
+}
+header nav ul li a {
+  padding: 40px 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.4s;
+  position: relative;
+  z-index: 2;
+}
+/*a {
+  text-decoration-line: none;
+} */
+
 /* end header */
