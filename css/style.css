@@ -12,7 +12,8 @@ body {
     font-family: "Open Sans" , sans-serif;
 }
 ul {
-    list-style: none;
+     list-style: none;
+   /* padding-right:; */
 }
 .container {
     padding-left: 15px;
@@ -44,6 +45,7 @@ ul {
 header {
 
   /* background-color: transparent; */
+  z-index: 0;
 }
 header .container {
     display: flex;
@@ -81,7 +83,7 @@ header nav {
 }
 header ul {
     display: flex;
-    margin: 0;
+    margin: 50px;
     padding: 0;
     position: absolute;
   }
@@ -100,15 +102,17 @@ header ul {
 
     .bar:hover ~ ul li a {
       padding: 15px;
+      padding-right: 0;
       display: block;
       width: 100%;
-      background-color: rgba(0, 0, 0, 25%);
+      background-color: rgba(0, 0, 0, 60%);
     }
     .bar:hover ~ ul {
       flex-direction: column;
       justify-content: flex-start;
       bottom: -285%;
-
+      margin: 0;
+      width: 97vw;
       left: 0;
     }
   }
@@ -183,5 +187,31 @@ font-size: 21px;
 
 /* end header */
 /* start landing */
-.landing
+/* .landing {
+  background-image: url(../images/landing.jpg);
+  position: absolute;
+top: 0;
+  z-index: 0;
+} */
+ .bg  {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/landing.jpg);
+
+ }
+ .bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 60%);
+  z-index: 0;
+ }
+.landing .text {
+  /* background-color: rgba(0, 0, 0, 0%); */
+  background-color: var(--main-color);
+  z-index: 2;
+}
 /* end landing */
