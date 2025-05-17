@@ -185,7 +185,7 @@ font-size: 21px;
   top: 0;
   z-index: -1;
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
 }
 .landing .overlay {
@@ -205,15 +205,23 @@ font-size: 21px;
 }
 
 .landing .text {
-  color: white;
-  
-  z-index: 2;
-
-  display: block;
   background-color: var(--transparent-color);
+  padding: 20px;
+  color: white;
   text-align: center;
-  width: 400px;
-  padding : 20px;
+  width: 100%; /* يغطي كل العرض على الموبايل */
+  box-sizing: border-box;
+  margin: 0 10px;
+  border-radius: 12px;
+}
+
+/* على الشاشات الأكبر من 768px */
+@media (min-width: 768px) {
+  .landing .text {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .landing .fa-angle-left,
@@ -238,12 +246,7 @@ font-size: 21px;
   .landing .fa-angle-right{
   display : none;
 }
-.landing .text {
 
-min-width: 100vw;
-padding-left: 20px;
-
-}
 
 }
 /* end landing */
