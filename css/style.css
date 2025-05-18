@@ -45,7 +45,7 @@ ul {
 
 /* start header */
 header {
-
+position: relative;
   /* background-color: transparent; */
 }
 header .container {
@@ -79,7 +79,7 @@ header nav {
 }
   header .bar {
   /* padding-left: 40px; */
-  position: relative;
+  position: absolute;
   /* color: transparent; */
   right: 50px;
   display: none;
@@ -99,6 +99,7 @@ header ul {
     header .bar {
       /* color: white; */
       display: block;
+      position: absolute;
     }
     .bar:hover ~ ul li {
       display: block;
@@ -112,8 +113,9 @@ header ul {
     }
     .bar:hover ~ ul {
       flex-direction: column;
-      justify-content: flex-start;
-      bottom: -285%;
+      position: fixed;
+      
+      top: 97px;
 
       left: 0;
     }
