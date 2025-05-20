@@ -217,6 +217,7 @@ font-size: 21px;
   box-sizing: border-box;
   margin: 0 10px;
   border-radius: 12px;
+  flex-wrap: wrap;
 }
 
 /* على الشاشات الأكبر من 768px */
@@ -252,5 +253,28 @@ font-size: 21px;
 }
 
 
+}
+.landing ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 1px white;
+  
+  
+  margin-right: 10px;
+}
+.landing .active {
+  background-color: var(--main-color);
+  border: solid 1px var(--main-color);
+}
+.landing ul {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  flex-wrap: nowrap;
+  padding : 0;
+  margin: 0;
 }
 /* end landing */
