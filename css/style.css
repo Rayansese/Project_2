@@ -107,19 +107,17 @@ header ul {
   }
   header nav ul li a {  
     padding: 20px;
-    
-      padding-top: 0;
+    padding-top: 0;
     padding-bottom: 0;
-  
-  display: flex;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.4s;
-  position: relative;
-  z-index: 99;
-      height: 100%;
-      width: 100%;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -208,11 +206,39 @@ header .form::before  {
     width: inherit;
     height: inherit;
   } */
-header li a.active,
+header nav ul li:first-child a {
+    color: var(--main-color);
+}
+
+header nav ul li:first-child a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background-color: var(--main-color);
+    z-index: 99;
+}
+
+header li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 0;
+    height: 1px;
+    background-color: var(--main-color);
+    z-index: 99;
+    transition: 0.4s;
+}
+
 header li a:hover {
-  color: var(--main-color);
-  border-bottom: solid 2px var(--main-color); 
-  z-index: 99;
+    color: var(--main-color);
+}
+
+header li a:hover::after {
+    width: 50%;
 }
 
 header i {
