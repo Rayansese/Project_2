@@ -105,12 +105,13 @@ header ul {
     padding-bottom: 0;
     margin-bottom: 0;
   }
-  header nav ul li a {
-  padding-left: 25px;
+  header nav ul li a {  
+    padding: 20px;
+    
       padding-top: 0;
     padding-bottom: 0;
-  text-align: center;
-  display: block;
+  
+  display: flex;
   color: white;
   text-decoration: none;
   font-size: 14px;
@@ -118,8 +119,9 @@ header ul {
   position: relative;
   z-index: 99;
       height: 100%;
-    top: 50%;
-    transform: translateY(-10%);  
+      width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
   @media (max-width :768px) {
@@ -209,7 +211,8 @@ header .form::before  {
 header li a.active,
 header li a:hover {
   color: var(--main-color);
-  border-bottom: solid 1px var(--main-color); 
+  border-bottom: solid 2px var(--main-color); 
+  z-index: 99;
 }
 
 header i {
