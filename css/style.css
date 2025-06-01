@@ -3,6 +3,50 @@
   --transparent-color: rgb(15 116 143 / 70%);
   --section-padding: 100px;
 }
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.heading h2 {
+  font-size: 42px;
+  font-weight: normal;
+  margin-bottom: 70px;
+  position: relative;
+}
+.heading h2::before {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 2px;
+ background-color:#77777746;
+ margin: 0 auto;
+ position: absolute;
+ top: 182%;
+ left: 50%;
+ transform: translateX(-50%);
+}
+.heading h2::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color:currentColor;
+  border: 1px solid #77777746;
+  border-radius: 50%;
+  position: absolute;
+  top: 162%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+.heading p {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 100px;
+  text-align: center;
+  line-height: 2; 
+  padding: 0 100px;
+}
   html {
     scroll-behavior: smooth;
     width: 100%;
@@ -47,9 +91,8 @@ ul {
 
 /* start header */
 header {
-position: relative;
-
-  /* background-color: gold; */
+  position: relative;
+  z-index: 3;
 }
 header .container {
     display: flex;
@@ -252,10 +295,7 @@ font-size: 21px;
 /* end header */
 /* start landing */
 .landing {
-  background-image: url(../images/landing.jpg);
-  position: absolute;
-  background-size: cover;
-  background-position: center;
+  position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -263,8 +303,22 @@ font-size: 21px;
   align-items: center;
   text-align: center;
   overflow: hidden;
+  z-index: 2;
+  margin-top: -97px; 
+  padding-top: 97px; 
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .landing .overlay {
@@ -351,3 +405,40 @@ font-size: 21px;
   margin: 0;
 }
 /* end landing */
+/* start services */
+.services {
+  position: relative;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: white;
+}
+.srvs {
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  gap: 30px;
+
+}
+.srvs .srv h3 {
+color: var(--main-color);
+}
+.srvs .srv {
+  text-align: center;
+  padding: 0 100px;
+}
+@media (min-width: 922px) {
+  .srvs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .srvs .srv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 100px;
+}
+}
+
+
+
+/* end services */
