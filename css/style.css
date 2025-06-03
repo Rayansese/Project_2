@@ -467,6 +467,7 @@ color: var(--main-color);
  display: grid;
   grid-row: 1fr 1fr;
   position: relative;
+  z-index: 2;
 }
 .desigen .text {
   width: 50%;
@@ -478,13 +479,39 @@ color: var(--main-color);
 .desigen .image {
   width: 50%;
   position: relative;
-  
+  z-index: -1;
 }
 .desigen .image img {
   width: 80%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -10%
+  bottom: -10%;
+  z-index: 1;
+  
+}
+.desigen .text {
+  background-color: var(--transparent-color);
+  height: calc(60% - 50px);
+   padding: 50px;
+   padding-right: 0;
+   width: calc(50% - 50px);
+}
+.desigen .text h2 {
+ margin-bottom: 40px;
+}
+.desigen .text li {
+  margin-bottom: 30px;
+
 }
 /* end desigen */
+/* start portfolio */
+.portfolio {
+  /* height: 100%; */
+  /* background-color: red; */
+  z-index: 99;
+  padding-top: 100px;
+}
+
+
+/* end portfolio */
