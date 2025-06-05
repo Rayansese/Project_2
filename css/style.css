@@ -468,6 +468,7 @@ color: var(--main-color);
   grid-row: 1fr 1fr;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 .desigen .text {
   width: 50%;
