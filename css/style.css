@@ -539,7 +539,10 @@ padding: 10px;
  .portfolio .container ul li.active {
   background-color: var(--main-color);
  }
- .portfolio .images {
+ .portfolio .photos {
   display: flex;
+ }
+ .portfolio .images div {
+  flex: 1;
  }
 /* end portfolio */
