@@ -483,7 +483,7 @@ color: var(--main-color);
   z-index: -1;
 }
 .desigen .image img {
-  width: 80%;
+  max-width: 80%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -500,10 +500,21 @@ color: var(--main-color);
 }
 .desigen .text h2 {
  margin-bottom: 40px;
+     padding-left: 40px;
 }
 .desigen .text li {
   margin-bottom: 30px;
 
+}
+@media (max-width :720px) {
+  .desigen .image {
+    width: 0;
+  }
+  .desigen .text {
+    width: 100%;
+    height: calc(50% - 50px);
+  }
+ 
 }
 /* end desigen */
 /* start portfolio */
@@ -513,6 +524,22 @@ color: var(--main-color);
   z-index: 99;
   padding-top: 100px;
 }
-
-
+ .portfolio .container ul {
+  display: flex;
+  /* text-align: center; */
+  padding: 0;
+  width: 100%;
+  /* margin: 0 auto; */
+  justify-content: center;
+ }
+ .portfolio .container ul li {
+padding: 10px;
+  
+ }
+ .portfolio .container ul li.active {
+  background-color: var(--main-color);
+ }
+ .portfolio .images {
+  display: flex;
+ }
 /* end portfolio */
