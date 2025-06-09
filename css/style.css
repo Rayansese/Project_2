@@ -523,6 +523,7 @@ color: var(--main-color);
   /* background-color: red; */
   z-index: 99;
   padding-top: 100px;
+  padding-bottom: 100px;
 }
  .portfolio .container ul {
   display: flex;
@@ -549,7 +550,7 @@ padding: 10px;
 .portfolio .photos div {
   flex: 1 1 25% ;
   position: relative;
-  
+  overflow: hidden;
 }
 
 .portfolio .photos div img {
@@ -557,6 +558,7 @@ padding: 10px;
   height: auto;
   display: block;
   position: relative;
+  transition: 0.3s ;
 }
 .portfolio .photos div::before {
     content: "";
@@ -571,7 +573,7 @@ padding: 10px;
 }
 .portfolio .photos div:hover::before {
   content: "Awesome Image";
-  height: calc(25% - 40px);
+  height: 50px;
   padding: 20px;
   width: calc(100% - 40px);
   overflow: hidden;
@@ -592,6 +594,10 @@ bottom: 0;
   left: 20px;
   color: var(--main-color);
 }
+.portfolio .photos div:hover img  {
+  transform: rotate(3deg) scale(1.1);
+  overflow: hidden;
+}
 /* شاشات متوسطة */
 @media (max-width: 1198px) {
   .portfolio .photos div {
@@ -605,5 +611,79 @@ bottom: 0;
     flex: 1 1 100%; 
   }
 }
+.portfolio a {
+  padding: 15px 20px;
+  display: block;
+  background-color: var(--main-color);
+  color: wheat;
+  margin: 30px auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: fit-content;
+}
 
 /* end portfolio */
+/* start video */
+.video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  background-color: rgb(25, 200, 250);
+  /* background-color: rgba(25, 200, 250, 0.3); */
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 10px;
+}
+@media (max-width: 614px) {
+  .video .text {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+.video .text h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.video .text p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.video .text button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.video .text button:hover {
+  background-color: white;
+  color: var(--main-color);
+}
+/* end video */
