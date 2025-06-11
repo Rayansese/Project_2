@@ -796,6 +796,7 @@ overflow: hidden;
     min-width: 100%;
   }
 }
+
 /* end stats */
 
 /* start our skills */
@@ -805,6 +806,17 @@ overflow: hidden;
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+@media (max-width: 1000px) {
+  .our-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
 }
 .our-skills .testimonials > h3 {
   margin-bottom: 30px;
@@ -844,4 +856,112 @@ position: relative;
   left: 0;
   background-color: #777;
 }
+.testimonials ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 1px white;
+  
+  
+  margin-right: 10px;
+}
+.testimonials .active {
+  background-color: var(--main-color);
+  border: solid 1px var(--main-color);
+}
+.testimonials ul {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  flex-wrap: nowrap;
+  padding : 0;
+  margin: 0;
+}
+
+.our-skills .testimonials ul.bullets {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.our-skills .testimonials ul.bullets li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 10px;
+  /* cursor: pointer; */
+  transition: 0.3s;
+}
+
+.our-skills .testimonials ul.bullets li.active {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.our-skills .skills {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.our-skills .skills > h3 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.our-skills .skills > p {
+  margin-bottom: 60px;
+  line-height: 2;
+  color: #9d9488;
+}
+.our-skills .skills  .skill  {
+margin-bottom: 40px;
+}
+.our-skills .skills  .skill h4 {
+  margin-bottom: 15px;
+  font-weight: normal;
+  }
+  .our-skills .skills  .skill .prog {
+    height: 30px;
+    background-color: #ccc;
+    position: relative;
+  }
+  .our-skills .skills  .skill .prog span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    display: block;
+  }
+  .our-skills .skills  .skill .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+
+    top: -40px;
+    color: white;
+    background-color: black;
+    padding: 4px 2px;
+    right: -18px;
+    /* font-size: 40px; */
+    border-radius: 4px;
+    font-size: 17px;
+    width: 40px;
+  }
+
+  .our-skills .skills  .skill .prog span::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: -15px;
+    border: 8px solid;
+    border-color: black transparent transparent transparent;
+  }
 /* end  our skills */
