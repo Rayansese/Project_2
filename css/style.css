@@ -223,7 +223,7 @@ header ul {
 header .form {
   padding-left: 40px;
   position: absolute;
-  
+  color: #ffffff;
 }
 header .form::before  {
   content: "";
@@ -469,6 +469,7 @@ color: var(--main-color);
   position: relative;
   z-index: 2;
   overflow: hidden;
+  color: #ffffff;
 }
 .desigen .text {
   width: 50%;
